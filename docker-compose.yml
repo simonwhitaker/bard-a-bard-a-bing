@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  search:
+    image: getmeili/meilisearch:v1.0
+    ports:
+      - 7700:7700
+    environment:
+      - MEILE_ENV=development
+    volumes:
+      - meili_data:/meili_data
+
+volumes:
+  meili_data:
+    driver: local
