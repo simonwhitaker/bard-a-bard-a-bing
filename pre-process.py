@@ -1,4 +1,25 @@
 #!/usr/bin/env python3
+#
+# This script reads the text of Shakespeare's complete works from a file or
+# STDIN, and outputs a JSON document containing the sonnets in line-by-line
+# granularity.
+#
+# The text this script expects as input is available from the MIT OpenCourseWare
+# website:
+# https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt
+#
+# The general form of the text is:
+#
+# THE SONNETS
+#
+# by William Shakespeare
+#
+#                      1
+#   From fairest creatures we desire increase,
+#   That thereby beauty's rose might never die,
+#   But as the riper should by time decease,
+#   His tender heir might bear his memory:
+#   ...etc
 
 import json
 import re
@@ -15,6 +36,8 @@ line_number = 0
 index = 0
 documents = []
 
+# Read from a file if a filename is provided on the command line, else from
+# STDIN
 if len(sys.argv) > 1:
     filename = sys.argv[1]
     fh = open(filename, 'r')
