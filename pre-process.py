@@ -48,8 +48,9 @@ with fh:
     for line in fh:
         if re_sonnet_start.match(line):
             is_reading_sonnets = True
-        elif re_sonnet_end.match(line):
-            is_reading_sonnets = False
+        elif is_reading_sonnets and re_sonnet_end.match(line):
+            # We only care about sonnets for now
+            break
         elif is_reading_sonnets:
             result = re_sonnet_number.search(line)
             if result:
