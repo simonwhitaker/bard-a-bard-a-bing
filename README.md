@@ -7,7 +7,7 @@ A search engine for Shakespeare sonnets, powered by [Meilisearch](https://www.me
 1. Generate a local JSON document containing the Shakespeare sonnets as per-line data elements:
 
     ```command
-    curl https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt \
+    curl -s https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt \
         | ./pre-process.py > sonnets.json
     ```
 
