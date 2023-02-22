@@ -1,4 +1,4 @@
-# Bard-a-Bard-a-Bing!
+# Bard-a-Bing!
 
 A search engine for Shakespeare sonnets, powered by [Meilisearch](https://www.meilisearch.com/).
 
