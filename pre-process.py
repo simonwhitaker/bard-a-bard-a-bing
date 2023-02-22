@@ -6,7 +6,7 @@ import sys
 
 re_sonnet_start = re.compile(r'^THE SONNETS$')
 re_sonnet_end = re.compile(r'^THE END$')
-re_sonnet_number = re.compile(r'^\s+(\d+)\s*')
+re_sonnet_number = re.compile(r'^\s+(\d+)\s*$')
 re_sonnet_line = re.compile(r'^\s+(\S.*)$')
 
 is_reading_sonnets = False
